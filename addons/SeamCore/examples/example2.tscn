@@ -1,36 +1,72 @@
 [gd_scene format=3 uid="uid://bpy3hwxnyisy0"]
 
 [ext_resource type="PackedScene" uid="uid://c44q04lgcqjdk" path="res://addons/SeamCore/nodes/env.tscn" id="1_n0oho"]
+[ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://addons/Arts/structure_material.tres" id="3_idxif"]
+[ext_resource type="Material" uid="uid://3ub3li5nvjsw" path="res://addons/Arts/structure_material_2.tres" id="4_f7bqh"]
+[ext_resource type="Material" uid="uid://bnka266lmacek" path="res://addons/Arts/structure_material_red.tres" id="5_fy8rr"]
 
-[node name="example2" type="Node3D" unique_id=1550249920]
+[node name="example" type="Node3D" unique_id=1550249920]
 
 [node name="env" parent="." unique_id=430294004 instance=ExtResource("1_n0oho")]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1188356776]
+[node name="Map" type="Node3D" parent="." unique_id=531461659]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map" unique_id=1188356776]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+material_override = ExtResource("3_idxif")
 use_collision = true
-size = Vector3(10, 0.05, 24)
+collision_mask = 2
+size = Vector3(10, 0.2, 24)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D" unique_id=1188586969]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 10)
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map" unique_id=1188586969]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 3)
+material_override = ExtResource("4_f7bqh")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
 size = Vector3(10, 0.05, 5)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="CSGBox3D" unique_id=800575433]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, -6)
+[node name="CSGBox3D7" type="CSGBox3D" parent="Map" unique_id=800575433]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, -13)
+layers = 5
+material_override = ExtResource("5_fy8rr")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
 size = Vector3(10, 0.05, 5)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D" unique_id=1792375700]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2, 2.5, 4)
-size = Vector3(6, 0.05, 5)
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map" unique_id=1792375700]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1, 2.5, -3)
+layers = 5
+material_override = ExtResource("4_f7bqh")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
+size = Vector3(8, 0.05, 5)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="CSGBox3D" unique_id=1703419673]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2.5, 2.5, 0)
-size = Vector3(5, 0.05, 5)
+[node name="CSGBox3D6" type="CSGBox3D" parent="Map" unique_id=1703419673]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1, 2.5, -7)
+layers = 5
+material_override = ExtResource("4_f7bqh")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
+size = Vector3(8, 0.05, 5)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D" unique_id=740905185]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -5, 2.5, 2)
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map" unique_id=740905185]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -5, 2.5, -5)
+layers = 5
+material_override = ExtResource("4_f7bqh")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
 size = Vector3(20, 0.05, 5)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGBox3D" unique_id=123908409]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 5, 2.5, 3)
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map" unique_id=123908409]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 5, 2.5, -4)
+layers = 5
+material_override = ExtResource("4_f7bqh")
+use_collision = true
+collision_layer = 5
+collision_mask = 2
 size = Vector3(18, 0.05, 5)
