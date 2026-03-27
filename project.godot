@@ -16,7 +16,7 @@ config/description="SeamCore is a Godot 4 addon that brings seamless, persistent
 With SeamCore, levels behave like connected parts of a single continuous world. Players can move forward, backtrack, and even carry objects across scene boundaries, all while the game accurately restores every interaction and change. It’s designed for developers who want immersive, stateful environments without building a custom save system from scratch."
 run/main_scene="uid://df8q3inriboc2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://bwtur75of2ev"
 
 [global_group]
 
