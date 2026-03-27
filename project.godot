@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SeamCore"
+config/description="SeamCore is a Godot 4 addon that brings seamless, persistent worlds to your 3D games. Inspired by classic level streaming systems like Half-Life 2, it allows scenes to remember everything the player has changed—from physics objects and NPCs to triggers and world states.
+
+With SeamCore, levels behave like connected parts of a single continuous world. Players can move forward, backtrack, and even carry objects across scene boundaries, all while the game accurately restores every interaction and change. It’s designed for developers who want immersive, stateful environments without building a custom save system from scratch."
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
