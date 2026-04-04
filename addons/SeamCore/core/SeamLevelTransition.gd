@@ -14,7 +14,7 @@ func save_current_level() -> void:
 	if current_scene == null:
 		return
 
-	var world_state: SeamWorldState = get_node("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node("/root/SeamCoreWorldState")
 	var level_path: String = current_scene.scene_file_path
 
 	var entities := {}
@@ -40,7 +40,7 @@ func load_current_level() -> void:
 	if current_scene == null:
 		return
 
-	var world_state: SeamWorldState = get_node("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node("/root/SeamCoreWorldState")
 	var level_path: String = current_scene.scene_file_path
 
 	if not world_state.has_level_state(level_path):
@@ -61,7 +61,7 @@ func load_current_level() -> void:
 # =========================
 
 func transition_to_scene(next_scene: String, landmark_name: String, player: Node3D, transfer_nodes: Array = []) -> void:
-	var world_state: SeamWorldState = get_node("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node("/root/SeamCoreWorldState")
 
 	var source_landmark = _find_landmark(landmark_name)
 	if source_landmark == null:
@@ -90,7 +90,7 @@ func transition_to_scene(next_scene: String, landmark_name: String, player: Node
 # =========================
 
 func resolve_transition(player: Node3D) -> void:
-	var world_state: SeamWorldState = get_node("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node("/root/SeamCoreWorldState")
 
 	if not world_state.pending_transition:
 		return
@@ -128,7 +128,7 @@ func resolve_transition(player: Node3D) -> void:
 # =========================
 
 func _queue_transfer_with_offset(node: Node3D, source_landmark: Node3D) -> void:
-	var world_state: SeamWorldState = get_node("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node("/root/SeamCoreWorldState")
 
 	if not _is_saveable_node(node):
 		return

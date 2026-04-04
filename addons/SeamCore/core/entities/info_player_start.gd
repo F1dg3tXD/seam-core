@@ -7,7 +7,7 @@ class_name SeamPlayerStart
 func _ready():
 	await get_tree().process_frame
 
-	var world_state := get_node("/root/SeamWorldState")
+	var world_state := get_node("/root/SeamCoreWorldState")
 	var transition: SeamLevelTransition = get_node("/root/SeamLevelTransition")
 
 	var player_scene: PackedScene = load(ProjectSettings.get_setting("seamcore/player_scene"))
