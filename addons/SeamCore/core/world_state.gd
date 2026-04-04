@@ -1,13 +1,7 @@
+# world_state.gd
 extends Node
 class_name SeamWorldState
 
-# Saved state per level scene path.
-# {
-#   "res://level_01.tscn": {
-#       "entities": { unique_id: {"scene": String, "parent_path": NodePath, "spawned": bool, "data": Dictionary} },
-#       "deleted": PackedStringArray
-#   }
-# }
 var level_states: Dictionary = {}
 
 # Serialized entities that should be injected into the next level.

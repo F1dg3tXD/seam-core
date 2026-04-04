@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bqpgu8ogjudoh"]
+
+[ext_resource type="Script" uid="uid://37ui6uposyu7" path="res://addons/SeamCore/core/entities/info_player_start.gd" id="1_wxbsb"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7rquu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxbsb"]
+transparency = 1
+albedo_color = Color(0.30588236, 1, 0, 0.47843137)
+uv1_triplanar = true
+proximity_fade_distance = 0.01
+stencil_flags = 2
+stencil_color = Color(0, 0.8352941, 0, 1)
+stencil_outline_thickness = 0.054
+
+[node name="info_player_start" type="Node3D" unique_id=1384987180]
+script = ExtResource("1_wxbsb")
+
+[node name="vis_debug" type="Node3D" parent="." unique_id=647817067]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vis_debug" unique_id=1217275941]
+mesh = SubResource("CapsuleMesh_7rquu")
+surface_material_override/0 = SubResource("StandardMaterial3D_wxbsb")

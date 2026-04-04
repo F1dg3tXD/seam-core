@@ -5,6 +5,8 @@
 [ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://addons/Arts/structure_material.tres" id="3_hdx45"]
 [ext_resource type="Material" uid="uid://3ub3li5nvjsw" path="res://addons/Arts/structure_material_2.tres" id="4_gu7di"]
 [ext_resource type="Material" uid="uid://bnka266lmacek" path="res://addons/Arts/structure_material_red.tres" id="5_5brts"]
+[ext_resource type="PackedScene" uid="uid://s8rt5y0y0eja" path="res://addons/SeamCore/core/entities/trigger_changelevel.tscn" id="6_5brts"]
+[ext_resource type="PackedScene" uid="uid://crefwnixs6snj" path="res://addons/SeamCore/core/entities/info_landmark.tscn" id="7_m7k6m"]
 
 [node name="example" type="Node3D" unique_id=1550249920]
 
@@ -76,3 +78,14 @@ use_collision = true
 collision_layer = 5
 collision_mask = 2
 size = Vector3(18, 0.05, 5)
+
+[node name="trigger_changelevel" parent="." unique_id=1563559051 instance=ExtResource("6_5brts")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33007693, 2.0318103, -4.9455643)
+
+[node name="CollisionShape3D" parent="trigger_changelevel/Area3D" parent_id_path=PackedInt32Array(1563559051, 142350250) index="0" unique_id=355044930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.231673, 0.5228882, -0.03466797)
+
+[node name="info_landmark" parent="trigger_changelevel" unique_id=286162131 instance=ExtResource("7_m7k6m")]
+
+[editable path="trigger_changelevel"]

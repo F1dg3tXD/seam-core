@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://s8rt5y0y0eja"]
+
+[ext_resource type="Script" uid="uid://ddxgsmiujmqnr" path="res://addons/SeamCore/core/entities/trigger_changelevel.gd" id="1_jg6wa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w53oy"]
+size = Vector3(1, 4.963745, 3.97583)
+
+[node name="trigger_changelevel" type="Node3D" unique_id=1563559051]
+script = ExtResource("1_jg6wa")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=142350250]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=355044930]
+shape = SubResource("BoxShape3D_w53oy")

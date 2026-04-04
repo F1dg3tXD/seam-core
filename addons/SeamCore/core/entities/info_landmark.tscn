@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://crefwnixs6snj"]
+
+[ext_resource type="Script" uid="uid://c4r1dffa5oofk" path="res://addons/SeamCore/core/entities/info_landmark.gd" id="1_fnue7"]
+
+[node name="info_landmark" type="Marker3D" unique_id=286162131]
+script = ExtResource("1_fnue7")
