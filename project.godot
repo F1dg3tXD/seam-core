@@ -18,6 +18,14 @@ run/main_scene="uid://df8q3inriboc2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bwtur75of2ev"
 
+[autoload]
+
+SeamCoreWorldState="*uid://cehi36nojt8no"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/SeamCore/plugin.cfg")
+
 [global_group]
 
 PlayerCharacter=""

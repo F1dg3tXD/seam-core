@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://bpy3hwxnyisy0"]
 
+[ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://addons/PlayerCharacter/player_character_scene.tscn" id="1_f7bqh"]
 [ext_resource type="PackedScene" uid="uid://c44q04lgcqjdk" path="res://addons/SeamCore/nodes/env.tscn" id="1_n0oho"]
 [ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://addons/Arts/structure_material.tres" id="3_idxif"]
 [ext_resource type="Material" uid="uid://3ub3li5nvjsw" path="res://addons/Arts/structure_material_2.tres" id="4_f7bqh"]
 [ext_resource type="Material" uid="uid://bnka266lmacek" path="res://addons/Arts/structure_material_red.tres" id="5_fy8rr"]
+[ext_resource type="PackedScene" uid="uid://s8rt5y0y0eja" path="res://addons/SeamCore/core/entities/trigger_changelevel.tscn" id="6_fy8rr"]
+[ext_resource type="PackedScene" uid="uid://crefwnixs6snj" path="res://addons/SeamCore/core/entities/info_landmark.tscn" id="7_0138p"]
 
 [node name="example" type="Node3D" unique_id=1550249920]
+
+[node name="PlayerCharacter" type="Node3D" parent="." unique_id=221237009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="PlayerCharacter" parent="PlayerCharacter" unique_id=185877053 instance=ExtResource("1_f7bqh")]
 
 [node name="env" parent="." unique_id=430294004 instance=ExtResource("1_n0oho")]
 
@@ -70,3 +78,17 @@ use_collision = true
 collision_layer = 5
 collision_mask = 2
 size = Vector3(18, 0.05, 5)
+
+[node name="trigger_changelevel" parent="." unique_id=1563559051 instance=ExtResource("6_fy8rr")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2373831, 2.0318103, -4.9455643)
+target_scene = "res://addons/SeamCore/examples/example.tscn"
+landmark_name = "info_landmark0"
+
+[node name="CollisionShape3D" parent="trigger_changelevel/Area3D" parent_id_path=PackedInt32Array(1563559051, 142350250) index="0" unique_id=355044930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.231673, 0.5228882, -0.03466797)
+
+[node name="info_landmark1" parent="trigger_changelevel" unique_id=286162131 instance=ExtResource("7_0138p")]
+unique_name_in_owner = true
+
+[editable path="trigger_changelevel"]

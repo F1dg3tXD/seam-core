@@ -82,10 +82,13 @@ size = Vector3(18, 0.05, 5)
 [node name="trigger_changelevel" parent="." unique_id=1563559051 instance=ExtResource("6_5brts")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33007693, 2.0318103, -4.9455643)
+target_scene = "res://addons/SeamCore/examples/example2.tscn"
+landmark_name = "info_landmark1"
 
 [node name="CollisionShape3D" parent="trigger_changelevel/Area3D" parent_id_path=PackedInt32Array(1563559051, 142350250) index="0" unique_id=355044930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.231673, 0.5228882, -0.03466797)
 
-[node name="info_landmark" parent="trigger_changelevel" unique_id=286162131 instance=ExtResource("7_m7k6m")]
+[node name="info_landmark0" parent="trigger_changelevel" unique_id=286162131 instance=ExtResource("7_m7k6m")]
+unique_name_in_owner = true
 
 [editable path="trigger_changelevel"]
