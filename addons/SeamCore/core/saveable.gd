@@ -25,7 +25,7 @@ func mark_deleted() -> void:
 		queue_free()
 		return
 
-	var world_state: SeamWorldState = get_node_or_null("/root/SeamWorldState")
+	var world_state: SeamWorldState = get_node_or_null("/root/SeamCoreWorldState")
 	if world_state != null:
 		world_state.mark_entity_deleted(current_scene.scene_file_path, unique_id)
 	queue_free()
