@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://df8q3inriboc2"]
 
 [ext_resource type="PackedScene" uid="uid://c44q04lgcqjdk" path="res://addons/SeamCore/nodes/env.tscn" id="1_ib2bt"]
+[ext_resource type="PackedScene" uid="uid://bqpgu8ogjudoh" path="res://addons/SeamCore/core/entities/info_player_start.tscn" id="2_48il7"]
 [ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://addons/PlayerCharacter/player_character_scene.tscn" id="2_x2jix"]
 [ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://addons/Arts/structure_material.tres" id="3_hdx45"]
 [ext_resource type="Material" uid="uid://3ub3li5nvjsw" path="res://addons/Arts/structure_material_2.tres" id="4_gu7di"]
@@ -14,6 +15,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="PlayerCharacter" parent="PlayerCharacter" unique_id=185877053 instance=ExtResource("2_x2jix")]
+
+[node name="info_player_start" parent="PlayerCharacter" unique_id=1384987180 instance=ExtResource("2_48il7")]
 
 [node name="env" parent="." unique_id=430294004 instance=ExtResource("1_ib2bt")]
 

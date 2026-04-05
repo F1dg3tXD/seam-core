@@ -21,6 +21,7 @@ config/icon="uid://bwtur75of2ev"
 [autoload]
 
 SeamCoreWorldState="*uid://cehi36nojt8no"
+PlayerPawn="*uid://bwggrf7sbmkcv"
 
 [editor_plugins]
 
